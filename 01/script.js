@@ -15,10 +15,11 @@ var imc;
 
 function Calcular() {
   var nome = inNome.value;
+  var sobrenome = inSobrenome.value;
   var peso = Number(inPeso.value);
   var altura = Number(inAltura.value);
   imc = peso / (altura * altura);
-  outMsg.textContent = nome + ", seu IMC é: " + imc.toFixed(2);
+  outMsg.textContent = nome + " " + sobrenome + ", seu IMC é: " + imc.toFixed(1);
 }
 btCalcular.addEventListener("click", Calcular);
 
@@ -34,5 +35,9 @@ function salvar() {
   vetAlturas.push(altura);
   vetPesos.push(peso);
   console.log(vetNomes, vetAlturas, vetPesos, vetSobrenomes, vetImc);
+
+  var saida = "Nome: " + vetNomes + "\n" + "Sobrenome: " + vetSobrenomes + "\n" + "Altura: " + vetAlturas + "\n" + "Peso: " + vetPesos;
+
+  outMsg.textContent = saida;
 }
 btSalvar.addEventListener("click", salvar);
