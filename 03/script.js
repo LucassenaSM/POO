@@ -3,6 +3,7 @@ var inNumeroDois = document.getElementById("inNumeroDois");
 var btSomar = document.getElementById("btSomar");
 var btSalvar = document.getElementById("btSalvar");
 var btResultado = document.getElementById("btResultado");
+var btPares = document.getElementById("btPares");
 var outMsg = document.getElementById("outMsg");
 
 var vetNumeroUm = [];
@@ -55,3 +56,17 @@ function resultado() {
 
 }
 btResultado.addEventListener("click", resultado);
+
+function calcularPares(){
+    var somaTotal = 0;
+    for (var i = 0; i < vetSoma.length; i++){
+        if(vetSoma[i] % 2 == 0){
+            
+            somaTotal += vetSoma[i];
+        }
+    var saida;
+    saida = "A soma de todas as somas é igual a: " + somaTotal;
+    outMsg.textContent = saida;
+    }
+
+}btPares.addEventListener("click", calcularPares);
