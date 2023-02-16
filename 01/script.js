@@ -34,9 +34,8 @@ function salvar() {
   vetSobrenomes.push(sobrenome);
   vetAlturas.push(altura);
   vetPesos.push(peso);
-  console.log(vetNomes, vetAlturas, vetPesos, vetSobrenomes, vetImc);
 
-  var saida = "Nome: " + vetNomes + "\n" + "Sobrenome: " + vetSobrenomes + "\n" + "Altura: " + vetAlturas + "\n" + "Peso: " + vetPesos;
+  var saida = "Nome: \t\t" + vetNomes + "\n" + "Sobrenome: \t" + vetSobrenomes + "\n" + "Altura: \t" + vetAlturas + "\n" + "Peso: \t\t" + vetPesos;
 
   outMsg.textContent = saida;
 }
