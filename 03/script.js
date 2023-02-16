@@ -42,13 +42,16 @@ function salvar() {
 btSalvar.addEventListener("click", salvar);
 
 function resultado() {
-  for (var i = 0; i < vetSoma.length; i++) {
-    var somaTotal;
+      var somaTotal = 0;
+      
+    for (var i = 0; i < vetSoma.length; i++) {
+
     somaTotal += vetSoma[i];
-    var saida = "A soma de todas as somas é igual a: " + somaTotal;
+    var saida;
+    saida = "A soma de todas as somas é igual a: " + somaTotal;
     outMsg.textContent = saida;
   }
   vetSoma = [];
-  console.log(vetSoma);
+
 }
 btResultado.addEventListener("click", resultado);
