@@ -27,5 +27,4 @@ btnSomarVet.addEventListener("click", function(){
     resultado += somar(vetNumber1[i], vetNumber2[i]);
     outMsg.textContent = resultado;
 }
-console.log = resultado;
 });
